@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F4F0"
+    tools:context=".SettingsFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="15dp">
+
+    <TextView
+        android:id="@+id/shadowWidget"
+        android:layout_width="349dp"
+        android:layout_height="384dp"
+        android:background="@drawable/shadow"
+        android:elevation="40dp"
+        android:fontFamily="sans-serif-medium"
+
+        android:padding="40dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343" />
+
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Settings"
+        android:textColor="@color/black"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/signoutButton"
+        android:layout_width="356dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="openLoginActivity"
+        android:text="SIGN OUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/savechangesButton"
+        android:layout_width="356dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="88dp"
+
+        android:text="SAVE CHANGES"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <EditText
+        android:id="@+id/ageBox"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:elevation="40dp"
+
+        android:ems="10"
+        android:hint="years"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/weightBox"
+        app:layout_constraintEnd_toEndOf="@+id/shadowWidget"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toBottomOf="@+id/goalBox" />
+
+    <EditText
+        android:id="@+id/weightBox"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:elevation="40dp"
+        android:ems="10"
+        android:hint="kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/heightBox"
+        app:layout_constraintEnd_toEndOf="@+id/shadowWidget"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toBottomOf="@+id/ageBox" />
+
+    <EditText
+        android:id="@+id/goalBox"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:elevation="40dp"
+        android:ems="10"
+        android:hint="kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/ageBox"
+        app:layout_constraintEnd_toEndOf="@+id/shadowWidget"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toBottomOf="@+id/shadowWidget" />
+
+    <EditText
+        android:id="@+id/heightBox"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:elevation="40dp"
+
+        android:ems="10"
+        android:hint="cm"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/shadowWidget"
+        app:layout_constraintEnd_toEndOf="@+id/shadowWidget"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toBottomOf="@+id/weightBox" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="40dp"
+        android:padding="15dp"
+        android:text="HEIGHT"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shadowWidget"
+        app:layout_constraintEnd_toStartOf="@+id/weightBox"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toTopOf="@+id/shadowWidget"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="40dp"
+        android:padding="15dp"
+        android:text="AGE"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shadowWidget"
+        app:layout_constraintEnd_toStartOf="@+id/ageBox"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toTopOf="@+id/shadowWidget"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="40dp"
+        android:padding="15dp"
+        android:text="GOAL"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shadowWidget"
+        app:layout_constraintEnd_toStartOf="@+id/heightBox"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toTopOf="@+id/shadowWidget"
+        app:layout_constraintVertical_bias="0.254" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="40dp"
+        android:padding="15dp"
+        android:text="WEIGHT"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shadowWidget"
+        app:layout_constraintEnd_toStartOf="@+id/goalBox"
+        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toTopOf="@+id/shadowWidget"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="40dp"
+        android:padding="15dp"
+        android:text="USERNAME"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shadowWidget"
+        app:layout_constraintEnd_toStartOf="@+id/goalBox"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toTopOf="@+id/shadowWidget"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <EditText
+        android:id="@+id/nameBox"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:elevation="40dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/goalBox"
+        app:layout_constraintEnd_toEndOf="@+id/shadowWidget"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="@+id/shadowWidget"
+        app:layout_constraintTop_toTopOf="@+id/shadowWidget"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
